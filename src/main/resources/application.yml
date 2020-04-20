@@ -1,0 +1,17 @@
+server:
+  port: 8099
+spring:
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://120.25.221.42:3306/chong?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&useSSL=false
+    hikari:
+      username: root
+      password: Logan_2019
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
