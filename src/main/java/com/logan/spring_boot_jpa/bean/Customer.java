@@ -1,5 +1,7 @@
 package com.logan.spring_boot_jpa.bean;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,12 +15,14 @@ import java.util.Set;
 @Setter
 @Entity
 @Table(name = "cst_customer")
+@ApiModel(description = "消费者")
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cust_id")
     private Long custId;
     @Column(name = "cust_name")
+    @ApiModelProperty(value = "消费者名字")
     private String custName;
     @Column(name = "cust_source")
     private String custSource;
